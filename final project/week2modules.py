@@ -50,9 +50,9 @@ def measure_single(qubit1,generalstate):#the arguments are array with pre-mutlip
 
 
 #density matrix
-def construct_density_matrix(alpha,beta):
-    ket_qubit = intialise_qubit_to_ket(alpha, beta)
-    bra_qubit = intialise_qubit_to_bra(alpha, beta)
+def construct_density_matrix(qubit):
+    ket_qubit = qubit
+    bra_qubit = qubit.transpose()
     # matrix multiplication
     density_matrix = np.dot(ket_qubit, bra_qubit)
     return density_matrix
