@@ -68,7 +68,7 @@ plt.show()
 
 
 # iterating over the qubits sqrt(N) no. of times perfroming amplitude amplification
-for i in range(int(np.sqrt(N))):
+for i in range(int((3.14/4)*np.sqrt(N))):#the no. of iteration is pi/4*sqrt(no. of items)
     interm_1 = np.dot(oracle(w, N), S_position)
     interm_2 = np.dot(avg_reflect(S_position_1), interm_1)
     S_position = interm_2
