@@ -72,6 +72,9 @@ for i in range(int((3.14/4)*np.sqrt(N))):#the no. of iteration is pi/4*sqrt(no. 
     interm_1 = np.dot(oracle(w, N), S_position)
     interm_2 = np.dot(avg_reflect(S_position_1), interm_1)
     S_position = interm_2
+    print('after'+str(i+1)+'iteration')
+    print(S_position)
+    print()
     qubits = tuple(wk2.construct_standard_basis(n))
     Y_pos = np.arange(len(qubits))
     amplitude = (S_position*S_position).flatten()
